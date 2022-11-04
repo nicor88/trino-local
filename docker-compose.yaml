@@ -9,7 +9,7 @@ volumes:
   coordinator_data:
     driver: local
   
-  woerker_data:
+  worker_data:
     driver: local
 
 
@@ -47,7 +47,7 @@ services:
     volumes:
       - ./worker-configs:/etc/trino
       - ./catalogs:/etc/trino/catalog
-      - woerker_data:/data/trino
+      - worker_data:/data/trino
 
     networks:
       - services
